@@ -1,0 +1,112 @@
+package NewJavaProjects;
+
+import java.util.Scanner;
+class Automobile {
+	int auto_choice=0;
+	void list() {
+		System.out.println("Fetching Available Items");
+		System.out.println("1. Vehicle Covers and Seat Covers");
+		System.out.println("2. GPS Navigators");
+		System.out.println("3. Floor Mats");
+		System.out.println("4. Puncture Repair Kit");
+		Automobile a = new Automobile();
+		a.choice();
+		}
+	void choice() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your Choice");
+		int choice1 = sc.nextInt();
+		Automobile p = new Automobile();
+		if(choice1 == 1) {
+			System.out.println("Vehicle Covers and Seat Covers Details : ");
+			int Covers = sc.nextInt();
+			p.Product_Details1();
+		}
+		if(choice1 == 2) {
+			System.out.println("GPS Navigators Details : ");
+			int Navigators = sc.nextInt();
+			p.Product_Details2();
+		}
+		if(choice1 == 3) {
+			System.out.println("Floor Mats Details : ");
+			int Mats = sc.nextInt();
+			p.Product_Details3();
+		}
+		if(choice1 == 4) {
+			System.out.println("Puncture Repair Kit Details : ");
+			int Kit = sc.nextInt();
+			p.Product_Details4();
+		}
+	}		
+	void Product_Details1() {
+		Automobile p = new Automobile();
+		System.out.println("High Quality Vehicle Cover and Seat Covers");
+		p.abc();
+	}
+	void Product_Details2() {
+		Automobile p = new Automobile();
+		System.out.println("High Quality GPS Navigators");
+		p.abc();
+	}
+	void Product_Details3() {
+		Automobile p = new Automobile();
+		System.out.println("High Quality Floor Mats");
+		p.abc();
+	}
+	void Product_Details4() {
+		Automobile p = new Automobile();
+		System.out.println("High Quality Puncture Repair Kit");
+		p.abc();
+	}
+	void abc() {
+		System.out.println("Do You want to Buy this Product ?, Say Y or N ");
+		Automobile p = new Automobile();
+		Scanner sc = new Scanner(System.in);
+		String st=sc.next();
+		if(st.equalsIgnoreCase("Y")) {
+			p.Payment();
+			}
+		else {
+			System.out.println("Thank You");
+			System.exit(0);
+		}
+	}
+	void Payment() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please Make your Payment.  Y or N ");
+		String st=sc.next();
+		if(st.equalsIgnoreCase("Y")) {
+			System.out.println("You Purchased this item");
+			}
+		else {
+			System.out.println("Payment Unsuccessful you did not Purchase the Product");
+			System.exit(0);
+		}
+			}
+	}
+
+public class GQTMart {
+	public static void main(String[] args) {
+		System.out.println("Welcome to GQT Shopping Mart");
+		System.out.println("Available Product Categories are : ");
+		System.out.println("1. Automobile Accessories 2. Electronics Gadgets 3. Clothing 4. Household items");
+		System.out.println("Enter your choice : ");
+		Scanner sc = new Scanner(System.in);
+		int choice1 = sc.nextInt();
+		if (choice1==1) {
+			System.out.println("Welcome to the world of Automobiles");
+			Automobile a = new Automobile();
+			a.list();
+	}
+		else if (choice1==2) {
+			System.out.println("Welcome to the world of Electronics");
+		}
+		else if (choice1==3) {
+			System.out.println("Welcome to the world of Fashion and Styling");
+	}
+		else if (choice1==4) {
+			System.out.println("Welcome to the world of Household Items");
+}
+	}
+}
