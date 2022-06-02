@@ -5,10 +5,10 @@ class Automobile {
 	int auto_choice=0;
 	void list() {
 		System.out.println("Fetching Available Items");
-		System.out.println("1. Cars");
-		System.out.println("2. Bikes");
-		System.out.println("3. Scooters");
-		System.out.println("4. Bicycle"); 
+		System.out.println("1. Vehicle Covers and Seat Covers");
+		System.out.println("2. GPS Navigators");
+		System.out.println("3. Floor Mats");
+		System.out.println("4. Puncture Repair Kit"); 
 		Automobile a = new Automobile();
 		a.choice();
 		}
@@ -19,61 +19,40 @@ class Automobile {
 		int choice1 = sc.nextInt();
 		Automobile a = new Automobile();
 		if(choice1 == 1) {
-			System.out.println("Car Details : ");
+			System.out.println("Vehicle Covers and Seat Covers Details : ");
 			a.Product_Details1();
 		}
 		if(choice1 == 2) {
-			System.out.println("Bikes Details : ");
+			System.out.println("GPS Navigators Details : ");
 			a.Product_Details2();
 		}
 		if(choice1 == 3) {
-			System.out.println("Scooters Details : ");
+			System.out.println("Floor Mats Details : ");
 			a.Product_Details3();
 		}
 		if(choice1 == 4) {
-			System.out.println("Bicycle Details : ");
+			System.out.println("Puncture Repair Kit Details : ");
 			a.Product_Details4();
 		}
 	}		
 	void Product_Details1() {
 		Automobile a = new Automobile();
-		System.out.println("Make - Audi");
-		System.out.println("Model - Audi Q7");
-		System.out.println("Engine - 5000 cc");
-		System.out.println("Capacity - 3+1");
-		System.out.println("Colour - Black/White");
-		System.out.println("Cost - 4800000");
+		System.out.println("High Quality Vehicle Cover and Seat Covers");
 		a.buypage();
 	}
 	void Product_Details2() {
 		Automobile a = new Automobile();
-		System.out.println("Make - Royal Enfield");
-		System.out.println("Model - Classic 500");
-		System.out.println("Engine - 500 cc");
-		System.out.println("Capacity - 2");
-		System.out.println("Colour - Black/Desert Storm/Maroon");
-		System.out.println("Cost - 223000");
-		
+		System.out.println("High Quality GPS Navigators");
 		a.buypage();
 	}
 	void Product_Details3() {
 		Automobile a = new Automobile();
-		System.out.println("Make - Honda");
-		System.out.println("Model - Activa 6G");
-		System.out.println("Engine - 109 cc");
-		System.out.println("Capacity - 2");
-		System.out.println("Colour - Black/White/Maroon/Blue");
-		System.out.println("Cost - 102000");
+		System.out.println("High Quality Floor Mats");
 		a.buypage();
 	}
 	void Product_Details4() {
 		Automobile a = new Automobile();
-		System.out.println("Make - Ranger");
-		System.out.println("Model - AXN DX");
-		System.out.println("Colour - White/Black");
-		System.out.println("Capacity - 2");
-		System.out.println("Other Details - With 5 gears");
-		System.out.println("Cost - 12000");
+		System.out.println("High Quality Puncture Repair Kit");
 		a.buypage();
 	}
 	void buypage() {
@@ -86,9 +65,8 @@ class Automobile {
 			}
 		else {
 			System.out.println("Thank You");
+			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 	void Payment() {
 		Scanner sc = new Scanner(System.in);
@@ -101,8 +79,6 @@ class Automobile {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
 class Electronics {
@@ -141,38 +117,22 @@ class Electronics {
 	}		
 	void Product_Details1() {
 		Electronics e = new Electronics();
-		System.out.println("Company - Samsung");
-		System.out.println("Model - Galaxy 15S");
-		System.out.println("RAM/Storage - 8GB/128GB");
-		System.out.println("Colour - Pearl white/Matte Black/Rose Pink");
-		System.out.println("Cost - 32999");
+		System.out.println("High Quality Mobile Phone");
 		e.buypage();
 	}
 	void Product_Details2() {
 		Electronics e = new Electronics();
-		System.out.println("Company - Sony");
-		System.out.println("Model - Bravia 1258BTS");
-		System.out.println("Type - Smart TV");
-		System.out.println("Dimensions - 48 inch/52 inch/32 inch");
-		System.out.println("Cost - 32999");
+		System.out.println("High Quality Televisions");
 		e.buypage();
 	}
 	void Product_Details3() {
 		Electronics e = new Electronics();
-		System.out.println("Company - Dell");
-		System.out.println("Model - Inspiron 800");
-		System.out.println("RAM/Storage - 8GB/2TB HDD/512GB SSD");
-		System.out.println("Colour-Silver/Black/Blue");
-		System.out.println("Cost - 52499");
+		System.out.println("High Quality Computers");
 		e.buypage();
 	}
 	void Product_Details4() {
 		Electronics e = new Electronics();
-		System.out.println("Company - Orient");
-		System.out.println("Model - PSPO");
-		System.out.println("Type - Cealing Fan");
-		System.out.println("Colour-White/Maroon");
-		System.out.println("Cost - 2499");
+		System.out.println("High Quality Fans");
 		e.buypage();
 	}
 	void buypage() {
@@ -185,8 +145,7 @@ class Electronics {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -200,8 +159,6 @@ class Electronics {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
 class Clothings {
@@ -240,34 +197,22 @@ class Clothings {
 	}		
 	void Product_Details1() {
 		Clothings c = new Clothings();
-		System.out.println("Material - Cotton");
-		System.out.println("Fabric - Cotton Linen");
-		System.out.println("Size - S/M/L/XL/XXL");
-		System.out.println("Cost - 1200");
+		System.out.println("High Quality Shirts");
 		c.buypage();
 	}
 	void Product_Details2() {
 		Clothings c = new Clothings();
-		System.out.println("Material - Jeans");
-		System.out.println("Fabric - Denims");
-		System.out.println("Size - 28/30/32/34/36");
-		System.out.println("Cost - 900");		
+		System.out.println("High Quality Trousers");
 		c.buypage();
 	}
 	void Product_Details3() {
 		Clothings c = new Clothings();
-		System.out.println("Material - Mixed");
-		System.out.println("Fabric - Cotton");
-		System.out.println("Size - S/M/L/XL/XXL");
-		System.out.println("Cost - 400");
+		System.out.println("High Quality Hoodies");
 		c.buypage();
 	}
 	void Product_Details4() {
 		Clothings c = new Clothings();
-		System.out.println("Material - Woolen");
-		System.out.println("Fabric - Pure Wool");
-		System.out.println("Size - S/M/L/XL/XXL");
-		System.out.println("Cost - 699");
+		System.out.println("High Quality Sweaters");
 		c.buypage();
 	}
 	void buypage() {
@@ -280,8 +225,7 @@ class Clothings {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -295,8 +239,6 @@ class Clothings {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
 class HouseholdItems {
@@ -335,35 +277,22 @@ class HouseholdItems {
 	}		
 	void Product_Details1() {
 		HouseholdItems h = new HouseholdItems();
-		System.out.println("Material - Steel");
-		System.out.println("High Quality Stainless Steel");
-		System.out.println("Available in Many Different Sizes");
-		System.out.println("Cost - Depends on Size");
+		System.out.println("High Quality Utensils");
 		h.buypage();
 	}
 	void Product_Details2() {
 		HouseholdItems h = new HouseholdItems();
-		System.out.println("Material - Wooden");
-		System.out.println("Type - Sofa Set");
-		System.out.println("Available in Many Different Designs");
-		System.out.println("Cost - 17000");
+		System.out.println("High Quality Furnitures");
 		h.buypage();
 	}
 	void Product_Details3() {
 		HouseholdItems h = new HouseholdItems();
-		System.out.println("Material - Cotten+Polyster");
-		System.out.println("Type - Floor Carpet");
-		System.out.println("Colour - Red/Blue/Orange/Maroon");
-		System.out.println("Cost - 999");
+		System.out.println("High Quality Carpets");
 		h.buypage();
 	}
 	void Product_Details4() {
 		HouseholdItems h = new HouseholdItems();
-		System.out.println("Company - SurfExcel");
-		System.out.println("Type - Washing Detergent");
-		System.out.println("Features - Can be used fot all type of Fabrics");
-		System.out.println("Pack - 1Kg");
-		System.out.println("Cost - 550");;
+		System.out.println("High Quality Detergents");
 		h.buypage();
 	}
 	void buypage() {
@@ -376,8 +305,7 @@ class HouseholdItems {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -391,15 +319,14 @@ class HouseholdItems {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
-class Restore {
-	void Refresh () {
+	
+public class GQTMart {
+	public static void main(String[] args) {
 		System.out.println("Welcome to GQT Shopping Mart");
 		System.out.println("Available Product Categories are : ");
-		System.out.println("1. Automobiles 2. Electronics Gadgets 3. Clothing 4. Household items");
+		System.out.println("1. Automobile Accessories 2. Electronics Gadgets 3. Clothing 4. Household items");
 		System.out.println("Enter your choice : ");
 		Scanner sc = new Scanner(System.in);
 		int choice1 = sc.nextInt();
@@ -424,25 +351,5 @@ class Restore {
 			HouseholdItems h = new HouseholdItems();
 			h.list();
 		}
-	}
-}
-class ContinueShopping {
-	void Recall() {
-		System.out.println("Do you want to Continue with your Shopping ? Say Y or N");
-		Restore r = new Restore();
-		Scanner sc = new Scanner(System.in);
-		String st = sc.next();
-		if(st.equalsIgnoreCase("Y")) {
-			r.Refresh();
-		}
-			else {
-				System.exit(0);
-		}
-	}
-}
-public class GQTMart {
-	public static void main(String[] args) {
-		Restore r = new Restore();
-		r.Refresh();
 	}
 }

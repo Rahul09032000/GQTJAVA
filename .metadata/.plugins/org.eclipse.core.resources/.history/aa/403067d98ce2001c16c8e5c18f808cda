@@ -86,9 +86,8 @@ class Automobile {
 			}
 		else {
 			System.out.println("Thank You");
+			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 	void Payment() {
 		Scanner sc = new Scanner(System.in);
@@ -185,8 +184,7 @@ class Electronics {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -280,8 +278,7 @@ class Clothings {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -376,8 +373,7 @@ class HouseholdItems {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {

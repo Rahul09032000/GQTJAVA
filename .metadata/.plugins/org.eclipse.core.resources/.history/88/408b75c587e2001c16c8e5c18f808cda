@@ -86,9 +86,8 @@ class Automobile {
 			}
 		else {
 			System.out.println("Thank You");
+			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 	void Payment() {
 		Scanner sc = new Scanner(System.in);
@@ -101,8 +100,6 @@ class Automobile {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
 class Electronics {
@@ -185,8 +182,7 @@ class Electronics {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -200,8 +196,6 @@ class Electronics {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
 class Clothings {
@@ -280,8 +274,7 @@ class Clothings {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -295,8 +288,6 @@ class Clothings {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
 class HouseholdItems {
@@ -376,8 +367,7 @@ class HouseholdItems {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -391,15 +381,14 @@ class HouseholdItems {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
-class Restore {
-	void Refresh () {
+	
+public class GQTMart {
+	public static void main(String[] args) {
 		System.out.println("Welcome to GQT Shopping Mart");
 		System.out.println("Available Product Categories are : ");
-		System.out.println("1. Automobiles 2. Electronics Gadgets 3. Clothing 4. Household items");
+		System.out.println("1. Automobile Accessories 2. Electronics Gadgets 3. Clothing 4. Household items");
 		System.out.println("Enter your choice : ");
 		Scanner sc = new Scanner(System.in);
 		int choice1 = sc.nextInt();
@@ -424,25 +413,5 @@ class Restore {
 			HouseholdItems h = new HouseholdItems();
 			h.list();
 		}
-	}
-}
-class ContinueShopping {
-	void Recall() {
-		System.out.println("Do you want to Continue with your Shopping ? Say Y or N");
-		Restore r = new Restore();
-		Scanner sc = new Scanner(System.in);
-		String st = sc.next();
-		if(st.equalsIgnoreCase("Y")) {
-			r.Refresh();
-		}
-			else {
-				System.exit(0);
-		}
-	}
-}
-public class GQTMart {
-	public static void main(String[] args) {
-		Restore r = new Restore();
-		r.Refresh();
 	}
 }

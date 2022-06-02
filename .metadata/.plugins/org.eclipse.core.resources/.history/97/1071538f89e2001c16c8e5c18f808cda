@@ -86,9 +86,8 @@ class Automobile {
 			}
 		else {
 			System.out.println("Thank You");
+			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 	void Payment() {
 		Scanner sc = new Scanner(System.in);
@@ -101,9 +100,9 @@ class Automobile {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
+	GQTMart gq = new GQTMart();
+	gq.main();
 }
 class Electronics {
 	int auto_choice=0;
@@ -185,8 +184,7 @@ class Electronics {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -200,8 +198,6 @@ class Electronics {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
 class Clothings {
@@ -280,8 +276,7 @@ class Clothings {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -295,8 +290,6 @@ class Clothings {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
 class HouseholdItems {
@@ -376,8 +369,7 @@ class HouseholdItems {
 			}
 		else {
 			System.out.println("Thank You");
-			ContinueShopping cs = new ContinueShopping();
-			cs.Recall();
+			System.exit(0);
 		}
 	}
 	void Payment() {
@@ -391,8 +383,6 @@ class HouseholdItems {
 			System.out.println("Payment Unsuccessful you did not Purchase the Product");
 			System.exit(0);
 		}
-		ContinueShopping cs = new ContinueShopping();
-		cs.Recall();
 	}
 }
 class Restore {
@@ -426,23 +416,9 @@ class Restore {
 		}
 	}
 }
-class ContinueShopping {
-	void Recall() {
-		System.out.println("Do you want to Continue with your Shopping ? Say Y or N");
-		Restore r = new Restore();
-		Scanner sc = new Scanner(System.in);
-		String st = sc.next();
-		if(st.equalsIgnoreCase("Y")) {
-			r.Refresh();
-		}
-			else {
-				System.exit(0);
-		}
-	}
-}
 public class GQTMart {
 	public static void main(String[] args) {
 		Restore r = new Restore();
 		r.Refresh();
-	}
+			}
 }
