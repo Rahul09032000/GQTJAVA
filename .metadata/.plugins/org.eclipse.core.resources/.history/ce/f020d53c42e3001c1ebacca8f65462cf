@@ -53,6 +53,7 @@ class Automobile {
 		System.out.println("Capacity - 2");
 		System.out.println("Colour - Black/Desert Storm/Maroon");
 		System.out.println("Cost - 223000");
+		
 		a.buypage();
 	}
 	void Product_Details3() {
@@ -94,8 +95,6 @@ class Automobile {
 		System.out.println("Please Make your Payment.  Y or N ");
 		String st=sc.next();
 		if(st.equalsIgnoreCase("Y")) {
-			ModeofPayment pm = new ModeofPayment();
-			pm.Methods();
 			System.out.println("You Purchased this item");
 			}
 		else {
@@ -104,7 +103,6 @@ class Automobile {
 		ContinueShopping cs = new ContinueShopping();
 		cs.Recall();
 	}
-
 }
 class Electronics {
 	int auto_choice=0;
@@ -195,8 +193,6 @@ class Electronics {
 		System.out.println("Please Make your Payment.  Y or N ");
 		String st=sc.next();
 		if(st.equalsIgnoreCase("Y")) {
-			ModeofPayment pm = new ModeofPayment();
-			pm.Methods();
 			System.out.println("You Purchased this item");
 			}
 		else {
@@ -291,8 +287,6 @@ class Clothings {
 		System.out.println("Please Make your Payment.  Y or N ");
 		String st=sc.next();
 		if(st.equalsIgnoreCase("Y")) {
-			ModeofPayment pm = new ModeofPayment();
-			pm.Methods();
 			System.out.println("You Purchased this item");
 			}
 		else {
@@ -388,8 +382,6 @@ class HouseholdItems {
 		System.out.println("Please Make your Payment.  Y or N ");
 		String st=sc.next();
 		if(st.equalsIgnoreCase("Y")) {
-			ModeofPayment pm = new ModeofPayment();
-			pm.Methods();
 			System.out.println("You Purchased this item");
 			}
 		else {
@@ -440,52 +432,9 @@ class ContinueShopping {
 			r.Refresh();
 		}
 			else {
-				System.out.println("Thank You !!!");
 				System.exit(0);
 		}
 	}
-}
-class ModeofPayment {
-	void Methods() {
-		System.out.println("The available Payment Methods are : ");
-		System.out.println("1. Credit/Debit Card");
-		System.out.println("2. UPI");
-		System.out.println("3. Internet Banking");
-		System.out.println("4. Cash");
-		System.out.println("Enter your Choice : ");
-		Scanner sc = new Scanner(System.in);
-		int choice2 = sc.nextInt();
-		if (choice2==1) {
-			System.out.println("Please Enter your Card Number");
-			long cardno = sc.nextLong();
-			System.out.println("Please Enter Expiry Month and Year");
-			String exp=sc.next();
-			System.out.println("Please Enter the CVV");
-			int cvv = sc.nextInt();
-			System.out.println("Please Enter the OTP received on your registered Mobile number");
-			int otp = sc.nextInt();
-	}
-		else if (choice2==2) {
-			System.out.println("Please enter your UPI registered Mobile Number");
-			long num = sc.nextLong();
-			System.out.println("Please approve your transaction from the UPI Application");
-		}
-		else if (choice2==3) {
-			System.out.println("Please enter your bank name");
-			String bn=sc.next();
-			System.out.println("Please enter your INB user name");
-			String un=sc.next();
-			System.out.println("Please enter your INB Password");
-			String pw=sc.next();
-			System.out.println("Please Enter the OTP received on your registered Mobile number");
-			int otp=sc.nextInt();
-		}
-		else if (choice2==4) {
-			System.out.println("Please pay your cash");
-			System.out.println("Cash Received. Thank You!!!");
-		}
-	}
-	
 }
 public class GQTMart {
 	public static void main(String[] args) {
@@ -493,4 +442,3 @@ public class GQTMart {
 		r.Refresh();
 	}
 }
-

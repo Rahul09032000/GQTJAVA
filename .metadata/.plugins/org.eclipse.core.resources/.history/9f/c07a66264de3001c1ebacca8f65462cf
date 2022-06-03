@@ -440,7 +440,6 @@ class ContinueShopping {
 			r.Refresh();
 		}
 			else {
-				System.out.println("Thank You !!!");
 				System.exit(0);
 		}
 	}
@@ -457,9 +456,12 @@ class ModeofPayment {
 		int choice2 = sc.nextInt();
 		if (choice2==1) {
 			System.out.println("Please Enter your Card Number");
-			long cardno = sc.nextLong();
+			long cardno = sc.nextInt();
 			System.out.println("Please Enter Expiry Month and Year");
-			String exp=sc.next();
+			int exp,expr;
+			System.out.print(exp = sc.nextInt());
+			System.out.print("/");
+			System.out.print(exp = sc.nextInt());
 			System.out.println("Please Enter the CVV");
 			int cvv = sc.nextInt();
 			System.out.println("Please Enter the OTP received on your registered Mobile number");
@@ -467,7 +469,7 @@ class ModeofPayment {
 	}
 		else if (choice2==2) {
 			System.out.println("Please enter your UPI registered Mobile Number");
-			long num = sc.nextLong();
+			int upi = sc.nextInt();
 			System.out.println("Please approve your transaction from the UPI Application");
 		}
 		else if (choice2==3) {
@@ -482,7 +484,7 @@ class ModeofPayment {
 		}
 		else if (choice2==4) {
 			System.out.println("Please pay your cash");
-			System.out.println("Cash Received. Thank You!!!");
+			System.out.println("Cash Received. Thank You1!!");
 		}
 	}
 	

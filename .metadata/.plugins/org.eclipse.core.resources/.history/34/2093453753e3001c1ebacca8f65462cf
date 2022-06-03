@@ -440,7 +440,6 @@ class ContinueShopping {
 			r.Refresh();
 		}
 			else {
-				System.out.println("Thank You !!!");
 				System.exit(0);
 		}
 	}
@@ -459,7 +458,7 @@ class ModeofPayment {
 			System.out.println("Please Enter your Card Number");
 			long cardno = sc.nextLong();
 			System.out.println("Please Enter Expiry Month and Year");
-			String exp=sc.next();
+			char exp = sc.next().charAt(choice2);
 			System.out.println("Please Enter the CVV");
 			int cvv = sc.nextInt();
 			System.out.println("Please Enter the OTP received on your registered Mobile number");
@@ -472,7 +471,7 @@ class ModeofPayment {
 		}
 		else if (choice2==3) {
 			System.out.println("Please enter your bank name");
-			String bn=sc.next();
+			long bn=sc.nextLong();
 			System.out.println("Please enter your INB user name");
 			String un=sc.next();
 			System.out.println("Please enter your INB Password");
