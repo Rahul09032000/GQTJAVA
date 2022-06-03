@@ -469,7 +469,6 @@ class ModeofPayment {
 			System.out.println("Please enter your UPI registered Mobile Number");
 			long num = sc.nextLong();
 			System.out.println("Please approve your transaction from the UPI Application");
-			System.out.println("UPI Transaction Approved Successfully");
 		}
 		else if (choice2==3) {
 			System.out.println("Please enter your bank name");
