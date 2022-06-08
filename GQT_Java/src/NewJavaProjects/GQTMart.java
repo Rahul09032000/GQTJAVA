@@ -95,7 +95,12 @@ class Automobile {
 		String st=sc.next();
 		if(st.equalsIgnoreCase("Y")) {
 			ModeofPayment pm = new ModeofPayment();
-			pm.Methods();
+			try {
+				pm.Methods();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("You Purchased this item");
 			}
 		else {
@@ -196,7 +201,12 @@ class Electronics {
 		String st=sc.next();
 		if(st.equalsIgnoreCase("Y")) {
 			ModeofPayment pm = new ModeofPayment();
-			pm.Methods();
+			try {
+				pm.Methods();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("You Purchased this item");
 			}
 		else {
@@ -292,7 +302,12 @@ class Clothings {
 		String st=sc.next();
 		if(st.equalsIgnoreCase("Y")) {
 			ModeofPayment pm = new ModeofPayment();
-			pm.Methods();
+			try {
+				pm.Methods();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("You Purchased this item");
 			}
 		else {
@@ -389,7 +404,12 @@ class HouseholdItems {
 		String st=sc.next();
 		if(st.equalsIgnoreCase("Y")) {
 			ModeofPayment pm = new ModeofPayment();
-			pm.Methods();
+			try {
+				pm.Methods();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("You Purchased this item");
 			}
 		else {
@@ -441,12 +461,13 @@ class ContinueShopping {
 		}
 			else {
 				System.out.println("Thank You !!!");
+				System.out.println("Visit Again..!");
 				System.exit(0);
 		}
 	}
 }
 class ModeofPayment {
-	void Methods() {
+	void Methods() throws InterruptedException {
 		System.out.println("The available Payment Methods are : ");
 		System.out.println("1. Credit/Debit Card");
 		System.out.println("2. UPI");
@@ -458,31 +479,45 @@ class ModeofPayment {
 		if (choice2==1) {
 			System.out.println("Please Enter your Card Number");
 			long cardno = sc.nextLong();
+			System.out.println("Verifying your Card Details....");
+			Thread.sleep(2000);
 			System.out.println("Please Enter Expiry Month and Year");
 			String exp=sc.next();
+			Thread.sleep(2000);
 			System.out.println("Please Enter the CVV");
 			int cvv = sc.nextInt();
+			Thread.sleep(2000);
 			System.out.println("Please Enter the OTP received on your registered Mobile number");
 			int otp = sc.nextInt();
+			Thread.sleep(2000);
 	}
 		else if (choice2==2) {
 			System.out.println("Please enter your UPI registered Mobile Number");
 			long num = sc.nextLong();
+			System.out.println("Verifying the Mobile Number....");
+			Thread.sleep(2000);
 			System.out.println("Please approve your transaction from the UPI Application");
+			Thread.sleep(5000);
 			System.out.println("UPI Transaction Approved Successfully");
 		}
 		else if (choice2==3) {
 			System.out.println("Please enter your bank name");
 			String bn=sc.next();
+			Thread.sleep(2000);
 			System.out.println("Please enter your INB user name");
 			String un=sc.next();
+			System.out.println("Confirming User with the Bank....");
+			Thread.sleep(2000);
 			System.out.println("Please enter your INB Password");
 			String pw=sc.next();
+			Thread.sleep(2000);
 			System.out.println("Please Enter the OTP received on your registered Mobile number");
 			int otp=sc.nextInt();
+			Thread.sleep(2000);
 		}
 		else if (choice2==4) {
 			System.out.println("Please pay your cash");
+			Thread.sleep(3000);
 			System.out.println("Cash Received. Thank You!!!");
 		}
 	}
