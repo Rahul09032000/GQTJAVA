@@ -33,13 +33,13 @@ class Hero extends Thread {
 		}
 	public void karnaAcquired() {
 		try {
-			synchronized (res1) {//acquired res-1
+			synchronized (res3) {//acquired res-1
 				System.out.println("Karna Acquired : "+res1);
 				Thread.sleep(3000);
 				synchronized (res2) {//acquired res-1
 					System.out.println("Karna Acquired : "+res2);
 					Thread.sleep(3000);
-					synchronized (res3) {//acquired res-1
+					synchronized (res1) {//acquired res-1
 						System.out.println("Karna Acquired : "+res3);
 						Thread.sleep(3000);
 				}//released res-3
@@ -51,7 +51,7 @@ class Hero extends Thread {
 			}
 		}
 	}
-public class StatesOfThreads {
+public class DeadLockState {
 	public static void main(String[] args) {
 		Hero h1 = new Hero();
 		Hero h2 = new Hero();
